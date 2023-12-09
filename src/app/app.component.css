@@ -1,0 +1,14 @@
+.main-container {
+    display: flex;
+}
+.main-container .side-nav {
+
+    min-height: calc(100vh - 70px);
+    background-color: #262626;
+    color: #fff;
+    box-shadow: 5px 5px 5px #939393;
+}
+
+.main-container .main {
+    padding: 10px;
+}

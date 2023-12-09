@@ -1,0 +1,144 @@
+<div class="topline">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+
+      </div>
+      <div class="show-for-large col-md-6">
+        <div class="call">
+          <span>+98 915 304 57 52</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header role="banner">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="block-heading">
+        <div class="show-for-large text">
+          <h2> التعديل علي المنتجات</h2>
+          <p> برجاء ادخال البيانات الخاصة بالمنتج بالحقول التالية </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="page payment-page">
+  <section class="payment-form">
+
+    <div class="container">
+      <div class="col-md-12">
+
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="siteinfo">
+              <h3>ملاحظات</h3>
+              <div class="price"><span>أكتب البيانات بدقة</span></div>
+              <h2>الدعم التقني</h2>
+              <div class="timer"><span id="timer">adidas@gmail.com</span></div>
+              <h3 class="image-prd">صورة المنتج</h3>
+              <img class="show-for-large" [src]="product?.imgurl[0]">
+              <p> الاستعلامات : <span>105545441100044</span></p>
+              <p> الدعم الفني : <span>155884400</span></p>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-sm-12">
+            <form>
+              <div class="card-details">
+                <h3 class="title">معلومات المنتج</h3>
+                <div class="row">
+                  <form [formGroup]="productForm" (ngSubmit)="UpdateProduct2(product?.id)" name="form1">
+                    <div class="form-group col-sm-12">
+                      <label for="Prodect-Name"> الاسم الخاص بالمنتج</label>
+                      <input id="Prodect-Name" type="text" class="form-control" placeholder="أسم المنتج"
+                        formControlName="name" name="name">
+                    </div>
+
+                    <div class="form-group col-sm-7">
+                      <label for="Prodect-Price">سعر المنتج</label>
+                      <div class="input-group expiration-date">
+                      </div>
+                      <input id="Prodect-Price" type="text" class="form-control" placeholder="السعر"
+                        aria-label="Card Holder" aria-describedby="basic-addon1" formControlName="price" name="price">
+                    </div>
+                    <div class="form-group col-sm-5">
+                      <label for="Products-Quantity"> كمية المنتج</label>
+                      <input id="Prodect-Quantite" type="text" class="form-control" placeholder="الكمية"
+                        aria-label="Card Holder" aria-describedby="basic-addon1" name="Quantity"
+                        formControlName="quantity">
+                    </div>
+                    <div class="form-group col-sm-7">
+                      <label for="Measuring-Products">القياس</label>
+                      <input id="Measuring-Products" type="text" class="form-control" placeholder="القياس الخاص بالمنتج"
+                        aria-label="Pass Holder" aria-describedby="basic-addon1" name="size"
+                        formControlName="availablesize">
+
+                    </div>
+                    <div class="form-group col-sm-5">
+                      <label for="Product-Title">عنوان المنتج</label>
+                      <input id="Product-Title" type="text" class="form-control" placeholder="عنوان المنتج"
+                        aria-label="Card Holder" aria-describedby="basic-addon1" formControlName="headline"
+                        name="headline">
+                    </div>
+                    <div class="form-group col-sm-7">
+                      <label for="Product-Colors">الوان المنتج</label>
+                      <input id="Product-Colors" type="text" class="form-control" placeholder="الوان المنتج"
+                        aria-label="Pass Holder" aria-describedby="basic-addon1" formControlName="color" name="color">
+                    </div>
+
+
+                    <div class="form-group col-sm-7">
+                      <label for="mySelect">النوع</label>
+                      <select id="mySelect" formControlName="gender">
+                        <option value="" disabled>النوع</option>
+                        <option value="الاطفال">الاطفال</option>
+                        <option value="الرجال">الرجال</option>
+                        <option value="النساء">النساء</option>
+                       
+                      </select>
+                    </div>
+
+
+                    <div class="form-group col-sm-7">
+                      <label for="category">التصنيف</label>
+                      <input id="category" type="text" class="form-control" placeholder="التصنيف"
+                        aria-label="Pass Holder" aria-describedby="basic-addon1" formControlName="category" name="category">
+                    </div>
+
+                    <div class="form-group col-sm-12">
+
+
+                      <label for="Product-Images"> لينك الصور الخاصة بالمنتج</label>
+
+                      <textarea id="imgurl" type="text" class="form-control custom-input py-5" aria-label="Phone Holder"
+                        aria-describedby="basic-addon1" formControlName="imgurl" name="imgurl"></textarea>
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                      <label for="Product Description"> الوصف</label>
+                      <input id="Product-Description" type="text" class="form-control custom-input"
+                        aria-label="captcha Holder" aria-describedby="basic-addon1" name="description"
+                        formControlName="description">
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <label for="Product Description"> التفاصيل الخاصة بالمنتج</label>
+                      <input id="Product-Description" type="text" class="form-control custom-input"
+                        aria-label="captcha Holder" aria-describedby="basic-addon1" name="details"
+                        formControlName="details">
+                    </div>
+                    <div class="form-group col-sm-12">
+                      <button class="btn btn-primary btn-block" type="submit">حفظ</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,408 @@
+<div class="apperance-container">
+
+    <div class="page" [ngStyle]="{'display': isHideEverything ? 'none' : ''}">
+
+
+        <h3 class="text-end mt-5" dir="rtl">
+            <label>
+                <input type="radio" name="option" value="option2" [(ngModel)]="selectedOption"
+                    (change)="onOptionChange()">
+            </label>
+            custom loader
+        </h3>
+
+        <div class="custom-loader row ps-5 pt-2"
+            [ngStyle]="{'opacity': selectedOption  == 'option2' ? '100%' : '100%'}">
+
+
+            <div class="html-box col-4">
+                <div class="form-group">
+                    <label for="textarea">HTML</label>
+                    <textarea id="textarea" class="form-control bg-dark text-warning" rows="10"
+                        placeholder="Enter text to save" #htmlRef>
+                </textarea>
+                </div>
+            </div>
+
+
+            <div class="css-box col-4">
+                <div class="form-group">
+                    <label for="textarea2">CSS</label>
+                    <textarea id="textarea2" class="form-control bg-dark text-warning text-left" rows="10" #cssRef>
+                </textarea>
+                </div>
+            </div>
+
+
+
+            <div class="css-box col-4">
+                <div class="form-group">
+                    <label for="textarea3">Javascript</label>
+                    <textarea id="textarea3" class="form-control bg-dark text-warning text-left" rows="10" #jsRef>
+                </textarea>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <h3 class="text-end mt-5 mb-1" dir="rtl">
+            <label>
+                <input type="radio" name="option" value="option1" [(ngModel)]="selectedOption"
+                    (change)="onOptionChange()">
+            </label> chose default loader
+        </h3>
+
+
+        <div class="row justify-content-center" [ngStyle]="{'opacity': selectedOption  == 'option1' ? '100%' : '0%'}">
+
+
+
+
+
+            <div class="default-loader" [ngStyle]="{'border': isBorderVisible1 ? '5px solid lightgreen' : 'none'}"
+                (click)="toggleBorder1()">
+
+                <div class="waveform">
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                    <div class="wave-bar"></div>
+                </div>
+
+
+            </div>
+
+            <div class="default-loader" [ngStyle]="{'border': isBorderVisible2 ? '5px solid lightgreen' : 'none'}"
+                (click)="toggleBorder2()">
+
+                <div class="loader-container">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+
+            </div>
+
+            <div class="default-loader" [ngStyle]="{'border': isBorderVisible3 ? '5px solid lightgreen' : 'none'}"
+                (click)="toggleBorder3()">
+
+                <div class="loader"></div>
+            </div>
+
+
+
+
+
+            <div class="nav-color" style="margin-block: 200px;">
+
+                <div class="HEADLINE text-end p-2 m-2 mt-5">
+                    <div class="row m-0">
+                        <div class="col-12">
+                            <div class="page-header">
+                                <div class="page-title">
+                                    <h1>Nav Color</h1>
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <div class="content">
+                    <div class="animated fadeIn">
+                        <div class="buttons">
+            
+                            <!-- Left Block -->
+                            <div class="row">
+                                <div class="col-md-6">
+            
+                                    <div class="card my-2">
+                                        <div class="card-header d-flex">
+                                            <strong>Light Blue </strong>
+                                            <button class="btn ms-auto fs-5" style="background-color: lightblue;"
+                                                (click)="lightblue()">اختر</button>
+                                        </div>
+                                        <div class="card-body p-0" style="height: 60px;">
+            
+            
+                                            <img src="../../assets/images/lightblue.png" width="100%" height="100%"
+                                                alt="My Image" />
+            
+                                        </div>
+                                    </div><!-- /# card -->
+            
+            
+                                    <div class="card my-2">
+                                        <div class="card-header d-flex">
+                                            <strong>Light Yellow </strong>
+            
+                                            <button class="btn ms-auto fs-5" style="background-color: lightyellow;"
+                                                (click)="lightyellow()">اختر</button>
+                                        </div>
+                                        <div class="card-body p-0" style="height: 60px;">
+            
+            
+                                            <img src="../../assets/images/lightyellow.png" width="100%" height="100%"
+                                                alt="My Image" />
+            
+                                        </div>
+                                    </div><!-- /# card -->
+                                </div>
+            
+                                <!-- Right Block -->
+                                <div class="col-md-6">
+            
+            
+                                    <div class="card my-2">
+                                        <div class="card-header d-flex">
+                                            <strong>Light Sea Green </strong>
+                                            <button (click)="lightseagreen()" class="btn ms-auto fs-5"
+                                                style="background-color: lightseagreen;">اختر</button>
+                                        </div>
+                                        <div class="card-body p-0" style="height: 60px;">
+            
+            
+                                            <img src="../../assets/images/LightSeaGreen.png" width="100%" height="100%"
+                                                alt="My Image" />
+            
+                                        </div>
+                                    </div><!-- /# card -->
+            
+            
+                                    <div class="card my-2">
+                                        <div class="card-header d-flex">
+                                            <strong>Light Salmon </strong>
+                                            <button (click)="lightsalmon()" class="btn ms-auto fs-5"
+                                                style="background-color: lightsalmon;">اختر</button>
+                                        </div>
+                                        <div class="card-body p-0" style="height: 60px;">
+            
+            
+                                            <img src="../../assets/images/LightSalmon.png" width="100%" height="100%"
+                                                alt="My Image" />
+            
+                                        </div>
+                                    </div><!-- /# card -->
+            
+            
+            
+            
+            
+            
+            
+                                </div>
+                            </div><!-- .row -->
+                        </div> <!-- .buttons -->
+                    </div><!-- .animated -->
+                </div>
+            
+                <div class="row mt-3">
+            
+            
+                    <div class="input-group input-group-sm mb-3 w-25">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Color Name</span>
+                        </div>
+                        <input #nameRef type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+            
+            
+                    <div class="input-group input-group-sm mb-3 w-25">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">RGB</span>
+                        </div>
+                        <input #rgbRef type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+            
+                    <div class="input-group input-group-sm mb-3 w-25">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">HEX</span>
+                        </div>
+                        <input #hexRef type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+            
+                    <div class="input-group input-group-sm mb-3 w-25">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">HSL</span>
+                        </div>
+                        <input #hslRef type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+            
+                    <div class="text-center mt-2">
+                        <button (click)="saveNav()" class="btn btn-secondary" style="width: 120px;">حفظ </button>
+                  
+                    </div>
+                </div>
+            
+            
+            
+            
+            
+                <!-- navcolorr div -->
+            </div>
+            
+            
+            <div class="cover">
+            
+            
+                <div class="HEADLINE text-center p-0">
+                    <div class="row m-0">
+            
+            
+                
+            
+                        <div class="col-3 p-1">
+                            <div class="header">
+                                <div class="p-0">
+                                    <h3>Home Page Cover</h3>
+                                    <figure>
+                                        <img 
+                                        [src] = "cover.home"
+                                        width="100%"
+                                        height="300px"
+                                        >
+            
+                                      <figcaption>
+                                        <input type="text" class="mt-2 w-100" [(ngModel)]="cover.home">
+                                      </figcaption>  
+                                    </figure>
+                                
+                                    
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-3 p-1">
+                            <div class="header">
+                                <div class="p-0">
+                                    <h3>Men Page Cover</h3>
+                                    <figure>
+                                        <img 
+                                        [src] = "cover.men"
+                                        width="100%"
+                                        height="300px"
+                                        >
+            
+                                      <figcaption>
+                                        <input type="text" class="mt-2 w-100" [(ngModel)]="cover.men">
+             
+                                      </figcaption>  
+                                    </figure>
+                                
+                                    
+                                </div>
+                            </div>
+                        </div>
+            
+                        
+                        <div class="col-3 p-1">
+                            <div class="header">
+                                <div class="p-0">
+                                    <h3>Women Page Cover</h3>
+                                    <figure>
+                                        <img 
+                                        [src] = "cover.women"
+                                        width="100%"
+                                        height="300px"
+                                        >
+            
+                                      <figcaption>
+                                        <input type="text" class="mt-2 w-100" [(ngModel)]="cover.women">
+                                      </figcaption>  
+                                    </figure>
+                                
+                                    
+                                </div>
+                            </div>
+                        </div>
+            
+                        
+                        <div class="col-3 p-1">
+                            <div class="header">
+                                <div class="p-0">
+                                    <h3>Kids Page Cover</h3>
+                                    <figure>
+                                        <img 
+                                        [src] = "cover.kids"
+                                        width="100%"
+                                        height="300px"
+                                        >
+            
+                                      <figcaption>
+                                        <input type="text" 
+                                        class="mt-2 w-100"
+                                        [(ngModel)]="cover.kids"
+                                        >
+                                      </figcaption>  
+                                    </figure>
+                                
+                                    
+                                </div>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                
+                <div class="text-center mt-2">
+                    <button (click)="setImagecover()" class="btn btn-secondary" style="width: 120px;">حفظ </button>
+                </div>
+            
+            
+            
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="output-box justify-content-center align-items-center"
+        [ngStyle]="{'display': (!isHideEverything) ? 'none' : 'flex'}" [ngClass]="{'everywhere': isHideEverything}"
+        #outputRef>
+
+    </div>
+
+
+
+</div>
+
+<button (click)="funck()" class="btnleader btn btn-secondary">الذهاب للمعاينة </button>
+<button (click)="saveLoader()" class="btnleader2 btn btn-secondary">حفظ </button>
+
+
+

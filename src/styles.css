@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Exo:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Exo", sans-serif;
+  background-color: #d8d8d8;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background:#A6A6A6;
+}
+::-webkit-scrollbar-thumb {
+  background:#595959;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:#0D0D0D;
+}

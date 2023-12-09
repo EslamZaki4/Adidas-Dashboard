@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <form (ngSubmit)="Login()">
+      <h1>تسجيل الدخول</h1>
+      <div class="input-box">
+        <input type="email" placeholder="الايميل الخاص بالمستخدم" required name="email" [(ngModel)]="email">
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="الرقم السري" required name="password" [(ngModel)]="passowrd">
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox"> تذكرني
+        </label>
+        <a href="#">نسيت الرقم السري؟</a>
+      </div>
+      <button type="button" class="btn" (click)="Login()">تسجيل الدخول</button>
+      <div class="register-link">
+        <p>ليس لديك حساب؟ <a href="#">التسجيل</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

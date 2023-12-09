@@ -1,0 +1,59 @@
+.widget-container {
+	 display: flex;
+	 align-items: space-between;
+
+}
+ .widget-container .widget {
+
+	 height: 175px;
+	 background-color: #fff;
+	 color: #fff;
+	 border-radius: 5px;
+	 margin: 10px;
+	 box-shadow: 5px 5px 5px #939393;
+	 display: flex;
+	 align-items: center;
+	 padding: 20px;
+}
+ .widget-container .widget.green {
+	 background-color:#0D0D0D;
+   direction: rtl;
+}
+ .widget-container .widget.yellow {
+	 background-color:#262626;
+   direction: rtl;
+}
+ .widget-container .widget.red {
+	 background-color:#A6A6A6;
+   direction: rtl;
+}
+ .widget-container .widget.blue {
+	 background-color:#F26800;
+   direction: rtl;
+}
+
+ .widget-container .widget .icon {
+
+	 font-size: 60px;
+	 text-align: center;
+}
+
+  .widget-container .widget .value {
+	 text-align: center;
+	 width: 175px;
+}
+ .widget-container .widget .value .top {
+	 font-size: 30px;
+}
+
+ .widget-container .widget .value .bottom {
+	 font-size: 20px;
+	 margin-top: 10px;
+}
+#areaChart{
+  padding-right: 45% !important;
+}
+#areaChartIcon{
+  font-size: 70px;
+}
+

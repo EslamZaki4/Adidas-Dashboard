@@ -1,0 +1,31 @@
+.nav-items {
+	 padding-top: 40px;
+direction: rtl;
+background-color:#262626;
+}
+ .nav-items .nav-item {
+	 padding: 25px 50px;
+	 cursor: pointer;
+
+}
+ @media only screen and (max-width: 1300px) {
+	 .nav-items .nav-item {
+		 padding: 25px 20px;
+	}
+}
+ .nav-items .nav-item:hover {
+	 background-color: #595959;
+}
+ .nav-items .nav-item fa-icon {
+	 margin-left: 20px;
+	 font-size: 22px;
+
+}
+ .nav-items .nav-item span {
+	 display: inline;
+}
+ @media only screen and (max-width: 1300px) {
+	 .nav-items .nav-item span {
+		 display: none;
+	}
+}

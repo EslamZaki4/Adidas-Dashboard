@@ -1,0 +1,32 @@
+<div>
+    <h1 class="text-center bg-success-subtle inline">الطلبات</h1>
+
+    </div>
+    <table class="table table-striped table-dark container" dir="rtl">
+      <thead>
+        <tr>
+          <th scope="col">البريد الاكلترونى</th>
+          <th scope="col">الرقم التعريفى للمنتج</th>
+          <th scope="col">المقاس</th>
+          <th scope="col">الكمية</th>
+          <th scope="col">المسح</th>
+        </tr>
+      </thead>
+      <tbody>
+    
+        <tr *ngFor="let item of cart">
+    
+  
+          <td>{{ item.email }}</td>
+          <td>{{ item.id }}</td>
+          <td>{{ item.size }}</td>
+          <td>{{ item.qty }}</td>
+   
+        <td>
+          <button class="btn btn bg-danger " (click)="delCart(item.email , item.id , item.size)">المسح</button>
+        </td>
+    
+        </tr>
+      </tbody>
+    </table>
+    

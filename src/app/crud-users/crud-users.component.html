@@ -1,0 +1,38 @@
+<h1 class="text-center bg-success-subtle">المستخدين</h1>
+<button class="button-52 col-12" role="button" (click)="addUser()">إضافة مستخدم</button>
+<table class="table table-striped table-dark container">
+  <thead>
+    <tr>
+      <th scope="col">الرمز</th>
+      <th scope="col">الايميل</th>
+      <th scope="col">الإسم الأول</th>
+      <th scope="col">الإسم الأخير</th>
+      <th scope="col">النوع</th>
+      <th scope="col">المسح</th>
+      <th scope="col">التعديل</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let user of users">
+
+
+      <td>{{ user.id }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.firstname }}</td>
+      <td>{{ user.lastname }}</td>
+      <td>{{ user.gender }}</td>
+
+    <td>
+      <button class="btn btn bg-danger " (click)="delUser(user.id)">مسح</button>
+    </td>
+
+    <td>
+      <button class="btn btn bg-success " (click)="updateUser(user)">تعديل</button>
+    </td>
+
+    </tr>
+  </tbody>
+</table>
+

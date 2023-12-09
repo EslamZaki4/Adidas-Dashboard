@@ -1,0 +1,51 @@
+
+
+<div class="widget-container row">
+  <div  id="areaChart" class="widget green    col-12 ">
+    <div id="areaChartIcon"  class="icon">
+
+      <fa-icon [icon]="faAreaChart"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">{{products.length}}</div>
+      <div class="bottom">عدد المنتجات</div>
+    </div>
+  </div>
+  <div class="widget green col ">
+    <div class="icon">
+      <fa-icon [icon]="faLocation"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">67</div>
+      <div class="bottom">عدد الدول </div>
+    </div>
+  </div>
+  <div class="widget yellow col">
+    <div class="icon">
+      <fa-icon [icon]="faShop"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">1200</div>
+      <div class="bottom">عدد أفرع حول العالم</div>
+    </div>
+  </div>
+  <div class="widget red col ">
+    <div class="icon">
+      <fa-icon [icon]="faBoxes"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">{{cart.length}}</div>
+      <div class="bottom">عدد الطلبات  </div>
+    </div>
+  </div>
+  <div class="widget blue col">
+    <div class="icon">
+      <fa-icon [icon]="faMoneyBill"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top">{{totalItemsInWishlist}}</div>
+      <div class="bottom">عدد المنتجات المفضله</div>
+    </div>
+  </div>
+</div>
+

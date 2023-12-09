@@ -1,0 +1,37 @@
+<div>
+<h1 class="text-center bg-success-subtle inline">المنتجات</h1>
+<button class="button-52 col-12" role="button" (click)="addProduct()">إضافة منتج</button>
+</div>
+<table class="table table-striped table-dark container">
+  <thead>
+    <tr>
+      <th scope="col">الصوره</th>
+      <th scope="col">الرمز</th>
+      <th scope="col">الإسم</th>
+      <th scope="col">السعر</th>
+      <th scope="col">التعديل</th>
+      <th scope="col">المسح</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let product of products">
+
+      <td><img [src]="product.imgurl[0]" width="50px" height="50px"></td>
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+
+      <td>
+
+        <button class="btn btn bg-success" (click)="updateProduct(product)">التعديل</button>
+
+      </td>
+
+    <td>
+      <button class="btn btn bg-danger " (click)="delProduct(product.id)">المسح</button>
+    </td>
+
+    </tr>
+  </tbody>
+</table>

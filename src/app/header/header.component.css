@@ -1,0 +1,36 @@
+.header {
+  height: 70px;
+  padding: 20px 50px;
+  background-color: rgb(13, 13,13);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 5px #939393;
+}
+.header .logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+.header .user {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: white;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+@media only screen and (max-width: 1300px) {
+#signOut{
+display: none;
+}
+
+}
